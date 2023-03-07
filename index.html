@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Canciones desde XML</h1>
+    <table id="demo">
+
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="logica.js"></script>
+    <script>
+        document.getElementById("CargarDatos").addEventListener("click", CargarDatos)
+
+        function CargarDatos() {
+            var xhr = new XMLHttpRequest()
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    cargarXML(this)
+                }else{
+                    console.log('nmms')
+                }
+            }
+            xhr.open("GET", "datos.xml", true)
+            xhr.send()
+        }
+
+        function cargarXML(xml) {
+            var docXML = xml.responseXML
+            var tabla = "<tr><th>TITULO</th><th>ARTISTA</th><th>ORIGEN</th><th>PRECIO</th><th>AñO</th></tr>"
+            var factura = docXML.getElementsByTagName("CD")
+            
+            for (let i = 0; i < factura.length; i++) {
+                tabla += "<tr><td>"
+                tabla += factura[i].getElementsByTagName("TITULO")[0].textContent
+                tabla += "</td><td>"
+                tabla += factura[i].getElementsByTagName("ARTISTA")[0].textContent
+                tabla += "</td><td>"
+                tabla += factura[i].getElementsByTagName("ORIGEN")[0].textContent
+                tabla += "</td><td>"
+                tabla += factura[i].getElementsByTagName("PRECIO")[0].textContent
+                tabla += "</td><td>"
+                tabla += factura[i].getElementsByTagName("AñO")[0].textContent
+                tabla += "</td>"
+            }
+            document.getElementById("demo").innerHTML = tabla
+        }
+    </script>
+</body>
+
+</html>

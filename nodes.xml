@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Disco>
+  <cancion>
+    <nombre>Besame Sin Sentir</nombre>
+    <autor>Micro TDH</autor>
+    <duracion>4 minutos 55 segundos</duracion>
+  </cancion>
+  <cancion>
+    <nombre>YOUGOOD?</nombre>
+    <autor>Travis Thompson</autor>
+    <duracion>5 minutos 13 segundos</duracion>
+  </cancion>
+  <cancion>
+    <nombre>Sing For The Moment</nombre>
+    <autor>Eminem</autor>
+    <duracion>5 minutos 25 segundos</duracion>
+  </cancion>
+  <cancion>
+    <nombre>Querido Amigo</nombre>
+    <autor>Paulo Londra</autor>
+    <duracion>3 minutos 49 segundos</duracion>
+  </cancion>
+  <cancion>
+    <nombre>Betrayed</nombre>
+    <autor>Lil Xan</autor>
+    <duracion>3 minutos 5 segundos</duracion>
+  </cancion>
+  <cancion>
+    <nombre>WITHOUT YOU</nombre>
+    <autor>The Kid Laroi</autor>
+    <duracion>3 minutos 3 segundos</duracion>
+  </cancion>
+</Disco>
